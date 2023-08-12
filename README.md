@@ -1,0 +1,1 @@
+# spinia_wp_theme
