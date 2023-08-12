@@ -1,0 +1,2103 @@
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Roboto Condensed";
+  src: url('http://spinia-wp.local/wp-content/themes/spinia/fonts/Robotocondensedlight.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto Condensed";
+  src: url('http://spinia-wp.local/wp-content/themes/spinia/fonts/Robotocondensed.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  src: url('http://spinia-wp.local/wp-content/themes/spinia/fonts/Robotocondensedbold.ttf');
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #585f6d;
+}
+button, 
+button:active, 
+button:focus {
+  outline: none;
+}
+input,
+input:active,
+input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+a+p {
+  margin-top: 20px;
+}
+ul li, ol li {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.main {
+  padding-left: 160px;
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  overflow: auto;
+  background: #f8fbfb;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.12);
+  padding: 20px 0;
+  overflow: hidden;
+  z-index: 996;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header-top {
+  text-align: center;
+}
+.header-top a {
+  display: flex;
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-menu {
+  padding: 0 15px;
+}
+.header-menu-item {
+  margin-bottom: 25px;
+  position: relative;
+}
+.header-content-list-link {
+  display: flex;
+  align-items: center;
+  color: #585f6d;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: .3s;
+}
+.header-content-list-link:hover {
+  color: #fb3f8c;
+}
+.header-content-list-icon {
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+}
+.header-buttons {
+  background: #ddf7f1;
+  position: relative;
+  margin: 20px 0 30px;
+  padding: 10px 15px;
+}
+.header-buttons::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/wave.png');
+}
+.header-buttons::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  transform: scaleY(-1);
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/wave.png');
+}
+.header-content-logo-link {
+  text-transform: uppercase;
+  transition: .4s;
+  position: relative;
+  min-width: 130px;
+  max-width: 100%;
+  color: #fff;
+  padding: 11px 15px 9px;
+  font-size: 12px;
+  letter-spacing: 0.30px;
+  border-radius: 18px;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  background-size: 300% 100%;
+}
+.header-content-logo-link:hover {
+  background-position: 100% 0;
+}
+.header-content-logo-link.in {
+  background-color: #00d89f;
+  background-image: linear-gradient(to right, #00d89f, #00c0d6, #00c0d6, #00d89f);
+  box-shadow: 0 4px #0ea3b2;
+  margin-bottom: 12px;
+}
+.header-content-logo-link.up {
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24, #ff6d24, #fb3f8c);
+  box-shadow: 0 4px #cc4f1e;
+  margin-bottom: 4px;
+}
+.header-bottom {
+  padding: 0 15px;
+  margin-top: 40px;
+}
+.header-bottom-chat {
+  display: flex;
+  align-items: center;
+  padding: 0 5px 0 15px;
+  margin: 6px 0;
+  transition: 0.3s;
+  font-size: 12px;
+  color: #585f6d;
+  text-transform: uppercase;
+}
+.header-bottom-chat:hover {
+  opacity: 0.8;
+}
+.header-bottom-chat-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.head-languages {
+  position: relative;
+}
+.language-block {
+  cursor: pointer;
+}
+.language-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px 12px 0;
+  margin-left: 15px;
+  font-size: 12px;
+  color: #585f6d;
+  text-transform: uppercase;
+  transition: .3s;
+}
+.language-link:hover {
+  opacity: 0.8;
+}
+.language-link-left {
+  display: flex;
+  align-items: center;
+}
+.language-icon {
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+}
+.language-icon-dowm {
+  width: 8px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.language-icon-dowm.active {
+  transform: rotate(180deg);
+}
+#languages {
+  position: absolute;
+  top: -140px;
+  right: -14px;
+  z-index: 995;
+  padding: 4px 0;
+  width: 160px;
+  background-color: #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  display: none;
+  border: 1px solid #edf0ef;
+}
+.lang-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lang-content-item {
+  border-bottom: 1px solid #edf0ef;
+  padding: 0 20px;
+  width: 100%;
+}
+.lang-content-item:last-child {
+  border-bottom: none;
+}
+.lang-content-item-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #585f6d;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.main-slider {
+  position: relative;
+  background: #ddf7f1;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+.main-slider::before {
+  content: "";
+  position: absolute;
+  height: 9vw;
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  background-image: url('http://spinia-wp.local/wp-content/themes/spinia/images/slider-back.png');
+  background-size: contain;
+  z-index: 2;
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+.eighteen-slider {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 25px;
+  right: 14px;
+  z-index: 15;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-slider .owl-dots {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0 !important;
+}
+.main-slider .owl-dots .owl-dot.active span {
+  background: #9ba2b2 !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px !important;
+  height: 10px !important;
+  border: 1px solid #9ba2b2;
+  background: none !important;
+  margin: 20px 0 0 !important;
+}
+.slider-promo {
+  background-image: linear-gradient(to left, rgba(0,155,147,0.7) 0%, rgba(0,172,136,0.7) 50%, rgba(90,209,150,0.7) 100%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 450px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  height: 360px;
+  padding: 0 15px 5vw 15px;
+  text-align: center;
+}
+.slider-promo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 360px;
+  width: 219px;
+  right: -219px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/slider-content-right.png');
+  background-size: cover;
+}
+.slider-img {
+  height: 360px;
+}
+.slider-promo-content {
+  flex-grow: 1;
+  color: #fff;
+  letter-spacing: 0.2em;
+  line-height: 1.1;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.slider-promo-title {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-family: Impact,Charcoal,sans-serif;
+}
+.slider-promo-subtitle {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-self: stretch;
+  color: #cee5de;
+  text-transform: uppercase;
+}
+.slider-promo-subtitle::before {
+  content: "";
+  margin-right: 10px;
+  flex: 0 1 35px;
+  height: 1px;
+  background: #cee5de;
+  vertical-align: middle;
+}
+.slider-promo-subtitle::after {
+  content: "";
+  margin-left: 10px;
+  flex: 0 1 35px;
+  height: 1px;
+  background: #cee5de;
+  vertical-align: middle;
+}
+.slider-promo-bottom-text {
+  font-size: 20px;
+  background: #00d89f linear-gradient(to right, #00d89f, #00c0d6);
+  padding: 4px 15px;
+  border-radius: 14px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+}
+.slider-promo-bottom-text.slide-two {
+  font-size: 35px;
+}
+.slider-promo-btn {
+  font-size: 18px;
+  min-width: 170px;
+  border-radius: 30px;
+  padding: 14px 20px 12px;
+  position: relative;
+  max-width: 100%;
+  letter-spacing: 0.30px;
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24, #ff6d24, #fb3f8c);
+  background-size: 300% 100%;
+  box-shadow: 0 4px #cc4f1e;
+  margin-bottom: 4px;
+  overflow: hidden;
+  transition: .4s;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+}
+.slider-promo-btn:hover {
+  background-position: 100% 0;
+}
+.slider-promo-money {
+  font-size: 100px;
+  position: relative;
+  display: block;
+  line-height: 1;
+  font-family: Impact,Charcoal,sans-serif;
+}
+.slider-promo-money.slide-three {
+  font-size: 76px;
+}
+.slider-promo-money-back {
+  font-size: 16px;
+  position: absolute;
+  top: 4px;
+  right: -20px;
+  min-width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background: #fb3f8c linear-gradient(to right, #fb4089, #ff6b2a);
+  letter-spacing: normal;
+}
+.slider-promo-btn.last {
+  position: absolute;
+  bottom: 105px;
+  left: 135px;
+}
+
+.category-block {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.category-block-tabs {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.category-tabs-item {
+  position: relative;
+  flex: 1 1 100px;
+  max-width: 130px;
+  text-align: center;
+}
+.category-tabs-item-link {
+  color: #585f6d;
+  position: relative;
+  display: inline-flex;
+  font-size: 12px;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.category-tabs-item-icon {
+  width: 40px;
+  height: 38px;
+  display: block;
+  margin: 0 auto 4px;
+  background-position-x: left;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: 2282px 52px;
+}
+.category-tabs-item-icon.all {
+  background-position: -2px -4px;
+}
+.category-tabs-item-icon.all:hover {
+  background-position: -55px -4px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.all {
+  color: #fb3f8c;
+}
+.category-tabs-item-icon.new {
+  background-position: -109px -4px;
+}
+.category-tabs-item-icon.new:hover {
+  background-position: -165px -3px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.new {
+  color: #e2a345;
+}
+.category-tabs-item-icon.slots {
+  background-position: -224px 0;
+}
+.category-tabs-item-icon.slots:hover {
+  background-position: -286px 0;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.slots {
+  color: #537588;
+}
+.category-tabs-item-icon.bonus {
+  background-position-x: center;
+  background-position-y: 4px;
+  background-size: 28px;
+  background-repeat: no-repeat;
+}
+.category-tabs-item-icon.bonus:hover {
+  background-position: center -36px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.bonus {
+  color: #D84444;
+}
+.category-tabs-item-icon.live {
+  background-position: -578px 0;
+}
+.category-tabs-item-icon.live:hover {
+  background-position: -632px 0;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.live {
+  color: #a3c67e;
+}
+.category-tabs-item-icon.roulette {
+  background-position: -347px -5px;
+}
+.category-tabs-item-icon.roulette:hover {
+  background-position: -406px -5px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.roulette {
+  color: #72556f;
+}
+.category-tabs-item-icon.blackjack {
+  background-position: -465px -4px;
+}
+.category-tabs-item-icon.blackjack:hover {
+  background-position: -522px -4px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.blackjack {
+  color: #b587a1;
+}
+.category-tabs-item-icon.jackpot {
+  background-position: -785px -4px;
+}
+.category-tabs-item-icon.jackpot:hover {
+  background-position: -836px -4px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.jackpot {
+  color: #29acab;
+}
+.category-tabs-item-icon.scratch {
+  background-position: -2158px -4px;
+}
+.category-tabs-item-icon.scratch:hover {
+  background-position: -2213px -4px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.scratch {
+  color: #745670;
+}
+.category-tabs-item-icon.action {
+  background-position-x: center;
+  background-position-y: 4px;
+  background-size: 28px;
+  background-repeat: no-repeat;
+}
+.category-tabs-item-icon.action:hover {
+  background-position-x: center;
+  background-position-y: -38px;
+}
+.category-tabs-item-link:hover .category-tabs-item-text.action {
+  color: #d66747;
+}
+.category-tabs-item::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  width: 1px;
+  height: 20px;
+  background: #ececec;
+}
+
+.search-block {
+  position: relative;
+  margin-top: 20px;
+}
+.search-block::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 7px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/wave-grey.png') repeat-x;
+}
+.search-block-content {
+  padding: 25px 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-block-providers {
+  flex: 0 0 180px;
+}
+.search-block-providers-link {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 36px;
+  height: 36px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 0 20px;
+  background: #fff;
+  color: #585f6d;
+  border: 1px solid #eee;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-block-right {
+  flex: 0 0 250px;
+  position: relative;
+}
+.search-block-right-input {
+  width: 100%;
+  height: 36px;
+  border-radius: 20px;
+  border: 1px solid #eeeeee;
+  outline: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: .3s;
+  font-family: "Roboto Condensed";
+}
+.search-block-right-input:focus {
+  box-shadow: 0 11px 15px rgba(0, 0, 0, 0.25);
+}
+.search-block-right-input-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to top, #efefef 0%, #fff 57%, #fff 100%);
+  border: 1px solid #eeeeee;
+  color: #585f6d;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.search-input-btn {
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.games-block {
+  margin-top: 30px;
+  overflow: hidden;
+}
+.games-block::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 7px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/wave-grey.png') repeat-x;
+}
+.games-title {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #00d6a3;
+  text-transform: uppercase;
+  font-family: Impact,Charcoal,sans-serif;
+  margin: 28px 0;
+  font-weight: 500;
+}
+.games-title::before {
+  content: "";
+  flex: 0 1 115px;
+  height: 13px;
+  margin-right: 15px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/title-wave.svg') repeat-x;
+}
+.games-title::after {
+  content: "";
+  flex: 0 1 115px;
+  height: 13px;
+  margin-left: 15px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/title-wave.svg') repeat-x;
+}
+.games-block-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-bottom: 40px;
+}
+.game-card {
+  position: relative;
+  transition: .4s;
+}
+.game-card-block {
+  position: relative;
+  overflow: hidden;
+}
+.game-card-block img {
+  display: block;
+}
+.game-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 0 0;
+  background-color: rgba(0,0,0,0.65);
+  opacity: 0;
+  transition: .4s;
+  bottom: 0;
+  z-index: 2;
+}
+.game-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 12px rgba(0, 255, 212, 0.4);
+  z-index: 3;
+}
+.game-card:hover .game-card-back {
+  opacity: 1;
+}
+.game-card-drops {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.game-card-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.game-card-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-transform: uppercase;
+}
+.game-card-label.hot {
+  background: #ff6a2b;
+}
+.game-card-label.new {
+  background: #00d5a6;
+  margin-bottom: 10px;
+}
+.game-card-back-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-card-back-title {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.game-card-play-icon {
+  width: 64px;
+}
+.game-card-play-icon {
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.game-card-play {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 15px 0 0;
+  position: relative;
+  font-size: 12px;
+  padding: 6px 12px;
+  display: inline-flex;
+}
+.game-card-play:hover {
+  transform: scale(1.1);
+  transition-delay: 0.11s;
+}
+.game-card-play::after {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  bottom: 50%;
+  left: 50%;
+  padding: 0 2px;
+  width: 0;
+  height: 0;
+  transition: .4s;
+}
+.game-card-play:hover::after {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #00d89f, #00c0d6);
+  border-radius: 25px;
+}
+.game-card-back-provider {
+  text-align: center;
+  padding: 5px 0;
+  background: rgba(0,0,0,0.75);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.game-card-back-provider-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 61px;
+}
+.game-card-back-provider-img.spin {
+  width: 111px;
+}
+.game-card-back-provider-img.pragmatic {
+  width: 46px;
+}
+.game-card-back-provider-img.playngo {
+  width: 68px;
+}
+.game-card-back-provider-img.end {
+  width: 48px;
+}
+.game-card-back-provider-img.mic {
+  width: 81px;
+}
+.game-card-back-provider-img.ygg {
+  width: 31px;
+}
+.game-card-back-provider-img.iso {
+  width: 94px;
+}
+.game-card-back-provider-img.boo {
+  width: 65px;
+}
+.game-card-back-provider-img.push {
+  width: 77px;
+}
+.game-card-back-provider-img.arc {
+  width: 16px;
+}
+.game-card-back-provider-img.bsg {
+  width: 53px;
+}
+.games-block-button {
+  text-align: center;
+}
+.games-block-button-link {
+  position: relative;
+  min-width: 130px;
+  max-width: 100%;
+  color: #fff;
+  padding: 11px 15px 9px;
+  font-size: 12px;
+  letter-spacing: 0.30px;
+  border-radius: 18px;
+  background-color: #00d89f;
+  background-image: linear-gradient(to right, #00d89f, #00c0d6, #00c0d6, #00d89f);
+  background-size: 300% 100%;
+  box-shadow: 0 4px #0ea3b2;
+  margin-bottom: 4px;
+  transition: .4s;
+  display: inline-flex;
+  text-transform: uppercase;
+}
+.games-block-button-link:hover {
+  background-position: 100% 0;
+}
+
+.jackpot-block {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jackpot-block::after {
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/jackpot-money.png') repeat;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.jackpot-block-img-left {
+  position: relative;
+  z-index: 3;
+  left: 0;
+}
+.jackpot-block-img-right {
+  position: relative;
+  z-index: 3;
+  right: 0;
+}
+.jackpot-block-content {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  min-width: 42vw;
+  padding: 2vw 8vw 3.5vw;
+  width: inherit;
+}
+.jackpot-block-content-title {
+  font-size: 40px;
+  color: #fff;
+  font-family: Impact,Charcoal,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  line-height: 1;
+}
+.jackpot-block-sum {
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: #eaff00;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  text-shadow: 0.03em 0.03em 0 #c8d81b;
+  padding-bottom: 10px;
+}
+.jackpot-block-link {
+  font-size: 16px;
+  color: #fff;
+  min-width: 130px;
+  max-width: 100%;
+  display: inline-flex;
+  padding: 11px 15px 9px;
+  letter-spacing: 0.30px;
+  border-radius: 18px;
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24, #ff6d24, #fb3f8c);
+  background-size: 300% 100%;
+  box-shadow: 0 4px #cc4f1e;
+  margin-bottom: 4px;
+  overflow: hidden;
+  transition: .4s;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.jackpot-block-link:hover {
+  background-position: 100% 0;
+}
+
+.bonus-block {
+  top: -11px;
+  z-index: 1;
+  background: #ddf7f1;
+  position: relative;
+  padding-bottom: 50px;
+}
+.bonus-block-title {
+  display: flex;
+  font-family: Impact,Charcoal,sans-serif;
+}
+.bonus-block-title::before {
+  content: "";
+  background: #fb4089;
+  flex: 1 1 auto;
+  height: 102px;
+  position: relative;
+  top: 10px;
+  right: -1px;
+}
+.bonus-block-title::after {
+  content: "";
+  background: #ff6d24;
+  flex: 1 1 auto;
+  height: 102px;
+  position: relative;
+  top: 10px;
+  right: 1px;
+}
+.bonus-block-content {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1048px;
+  height: 114px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+}
+.bonus-block-content-title {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.87px;
+  margin-bottom: 5px;
+}
+.bonus-block-content-description {
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.87px;
+}
+.deposit-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1048px;
+  min-height: 390px;
+  padding: 60px 0;
+  margin: 30px auto 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.deposit-block-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.deposit-block-item {
+  flex: 1 1 25%;
+  max-width: 25%;
+  text-align: center;
+  padding: 5px;
+}
+.deposit-block-item-title {
+  margin: 30px 0 20px;
+  display: block;
+  font-size: 24px;
+  font-family: Impact,Charcoal,sans-serif;
+  color: #106875;
+  text-transform: uppercase;
+}
+.deposit-block-item-descr {
+  font-size: 15px;
+  color: #56969f;
+}
+.deposit-block-item-img {
+  width: 108px;
+  height: 106px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.deposit-block-btn {
+  position: absolute;
+  bottom: -22px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+.deposit-block-btn-link {
+  font-size: 18px;
+  min-width: 170px;
+  border-radius: 30px;
+  padding: 14px 20px 12px;
+  position: relative;
+  max-width: 100%;
+  color: #fff;
+  letter-spacing: 0.30px;
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24, #ff6d24, #fb3f8c);
+  background-size: 300% 100%;
+  box-shadow: 0 4px #cc4f1e;
+  margin-bottom: 4px;
+  overflow: hidden;
+  transition: .4s;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.banner-block {
+  background: #ddf7f1;
+  position: relative;
+  top: -11px;
+}
+.banner-block-title {
+  display: flex;
+  font-family: Impact,Charcoal,sans-serif;
+  overflow: hidden;
+}
+.banner-block-title::before {
+  content: "";
+  background: #00d89f;
+  flex: 1 1 auto;
+  height: 155px;
+  position: relative;
+  top: 11px;
+  right: -1px;
+}
+.banner-block-title::after {
+  content: "";
+  background: #00c1d5;
+  flex: 1 1 auto;
+  height: 155px;
+  position: relative;
+  top: 11px;
+  left: -1px;
+}
+.banner-block-content {
+  background-repeat: no-repeat;
+  min-height: 168px;
+  width: 1048px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-block-content-title {
+  color: #fff;
+  font-family: Impact,Charcoal,sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.banner-block-content-left {
+  flex: 1 1 auto;
+  height: 100%;
+  position: relative;
+}
+.banner-block-content-left:before {
+  content: '';
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/car-left.png') no-repeat;
+  position: absolute;
+  top: 36px;
+  width: 56px;
+  height: 35px;
+  background-size: contain;
+}
+.banner-block-content-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 35%;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/line-races.png') repeat-x;
+  height: 2px;
+  width: calc(100% + 17vw);
+  z-index: 1;
+}
+.banner-block-content-right {
+  flex: 1 1 auto;
+  height: 100%;
+  position: relative;
+}
+.banner-block-content-right::before {
+  content: '';
+  position: absolute;
+  bottom: 36px;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/car-right.png') no-repeat;
+  width: 56px;
+  height: 35px;
+  background-size: contain;
+}
+.banner-block-content-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 35%;
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/line-races.png') repeat-x;
+  height: 2px;
+  width: calc(100% + 17vw);
+  z-index: 1;
+}
+.banner-block-content-left-content {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 50px;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.banner-block-content-right-content {
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: 50px;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.banner-block-tournir {
+  background-size: cover !important;
+  background-position: center -8vw !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0 15px 7.5vw 6.8vw;
+  position: relative;
+}
+.banner-block-tournir-left {
+  top: 2.5vw;
+  position: relative;
+  order: inherit;
+  align-self: flex-end;
+}
+.banner-block-tournir-content {
+  flex: 0 0 auto;
+  margin: 0 4vw;
+  display: flex;
+}
+.banner-block-tournir-right {
+  order: inherit;
+  flex-grow: inherit;
+  position: relative;
+  top: 7.5vw;
+  align-self: flex-end;
+}
+.banner-block-tournir-content-img {
+  max-width: inherit;
+  margin-right: 50px;
+  flex-grow: 1;
+}
+.banner-block-tournir-content-title {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: Impact,Charcoal,sans-serif;
+  color: #106875;
+  text-transform: uppercase;
+}
+.banner-block-tournir-content-text {
+  font-size: 15px;
+  margin: 30px 0;
+  color: #56969f;
+  text-transform: uppercase;
+}
+.banner-block-tournir-list {
+  font-size: 15px;
+  color: #56969f;
+  padding: 0;
+  list-style: none;
+}
+.banner-block-tournir-list li {
+  position: relative;
+  padding-left: 15px;
+  text-transform: capitalize;
+}
+.banner-block-tournir-list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: #27c2da;
+}
+.banner-block-tournir-btn-link {
+  font-size: 18px;
+  min-width: 170px;
+  border-radius: 30px;
+  padding: 14px 20px 12px;
+  position: relative;
+  max-width: 100%;
+  color: #fff;
+  letter-spacing: 0.30px;
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24, #ff6d24, #fb3f8c);
+  background-size: 300% 100%;
+  box-shadow: 0 4px #cc4f1e;
+  margin-bottom: 4px;
+  overflow: hidden;
+  transition: .4s;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+}
+.banner-block-tournir-btn-link:hover {
+  background-position: 100% 0;
+}
+
+.main-text {
+  padding: 30px;
+  margin-bottom: 8vw;
+}
+.main-text-block-content table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.main-text-block-content table td {
+  border: 2px solid #585f6d;
+  padding: 10px;
+}
+.main-text-block-content img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.footer {
+  position: relative;
+  background: #ddf7f1;
+}
+.footer::before {
+  content: "";
+  background: url('http://spinia-wp.local/wp-content/themes/spinia/images/wave-footer.png') no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 6.7vw;
+  position: absolute;
+  top: -6.7vw;
+}
+.footer-container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.footer-menu-item {
+  padding: 5px 15px;
+  text-align: center;
+}
+.footer-menu-item-link {
+  color: #585f6d;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: .4s;
+}
+.footer-menu-item-link:hover {
+  color: #23527c;
+}
+.footer-pays {
+  display: flex;
+  background: #cceae3;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-pay-item {
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
+  transition: .3s;
+}
+.footer-pay-item:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.footer-pay-item img {
+  height: 30px;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  background: #e7fdf8;
+  padding: 20px 0;
+}
+.footer-bottom-license {
+  display: flex;
+  align-items: center;
+}
+.license-icon-block {
+  padding: 0 30px;
+  flex: 0 0 120px;
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+.license-icon-block:hover {
+  transform: scale(1.2);
+}
+.license-icon-img {
+  width: 60px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.license-icon-text {
+  margin: 0;
+  color: #7a8496;
+  font-size: 12px;
+  line-height: 16.05px;
+}
+.footer-bottom-icons {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-bottom-item {
+  margin: 0 20px;
+}
+.footer-bottom-item-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 46px;
+}
+.footer-bottom-item-img.secure {
+  width: 127px;
+}
+.footer-bottom-item-img.plus {
+  width: 47px;
+}
+
+.mobile-header {
+  display: none;
+}
+.menu-mobile-button {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-mobile-button-icon {
+  background-color: #7f5572;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  width: 25px;
+  height: 2px;
+  display: block;
+}
+.menu-mobile-button-icon:last-child {
+  margin-bottom: 0;
+}
+
+.filter-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #969eaf;
+  text-align: center;
+}
+.filter-mobile span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-top: 5px;
+  transition: .3s;
+}
+.icon-filter {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -700px;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 440px;
+  background: #f8fbfb;
+  transition: .5s;
+}
+.mobile-menu-header {
+  display: flex;
+}
+.mobile-menu-btn {
+  display: block;
+  flex: 1 1 50%;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 10px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: .3s;
+}
+.mobile-menu-btn.reg {
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24);
+}
+.mobile-menu-btn.log {
+  background-color: #00d89f;
+  background-image: linear-gradient(to right, #00d89f, #00c0d6);
+}
+.mobile-menu-nav-item {
+  position: relative;
+}
+.mobile-menu-nav-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px 10px 14px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #585f6d;
+}
+.mobile-menu-nav-link:hover {
+  opacity: 0.8;
+}
+.mobile-menu-nav {
+  margin-bottom: 20px;
+}
+.mobile-bottom-block {
+  background: #cceae3;
+  padding: 25px 0 25px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-bottom-block-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 4px 0;
+  transition: 0.3s;
+  color: #585f6d;
+}
+.mobile-bottom-block-link:hover {
+  opacity: 0.8;
+}
+.mobile-languages {
+  position: relative;
+  padding: 25px 20px;
+}
+.language-link.mobile {
+  width: 60px;
+  background: #cceae3;
+  border-radius: 25px;
+  padding: 10px;
+}
+.close-icon {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-icon-img {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.error-block {
+  background: #fff;
+  padding-bottom: 7vw;
+}
+.error-block-content {
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  text-align: center;
+  min-height: 45vw;
+}
+.error-block-title {
+  font-family: Impact,Charcoal,sans-serif;
+  font-size: calc(30px + 8vw);
+  position: relative;
+  color: #ffeb5b;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0px 4px 0px #cb7320;
+}
+.error-block-title::after {
+  content: "404";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-shadow: none;
+  background-image: linear-gradient(to top, #ffcd23 0%, #ffcd23 40%, #ffec5c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.error-block-subtitle {
+  font-family: Impact,Charcoal,sans-serif;
+  font-size: calc(20px + 4vw);
+  position: relative;
+  color: #ffeb5b;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 0px #cb7320;
+}
+.error-block-subtitle::after {
+  content: "Error";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-shadow: none;
+  background-image: linear-gradient(to top, #ffcd23 0%, #ffcd23 40%, #ffec5c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.error-block-subtitle-text {
+  font-size: 18px;
+  color: #fff;
+  margin: 25px 0;
+  text-transform: uppercase;
+}
+.error-btn-home {
+  color: #fff;
+  min-width: 220px;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 14px 20px 12px;
+  position: relative;
+  max-width: 100%;
+  letter-spacing: 0.30px;
+  background-color: #fb3f8c;
+  background-image: linear-gradient(to right, #fb3f8c, #ff6d24, #ff6d24, #fb3f8c);
+  background-size: 300% 100%;
+  box-shadow: 0 4px #cc4f1e;
+  margin-bottom: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: .4s;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+}
+.error-btn-home:hover {
+  background-position: 100% 0;
+}
+
+.main-text-block-text h1 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.main-text-block-content p {
+  margin-top: 0;
+}
+
+.games-block.slots {
+  margin-top: 0;
+}
+.games-block.slots::before {
+  display: none;
+}
+
+.single-slots-back {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.single-slots-back img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.single-slots-demo-back {
+  display: none;
+}
+.single-slots-demo-back.play {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  margin: 30px 0 20px 0;
+  padding: 0 50px;
+}
+.single-slots-demo-back-cont {
+  position: relative;
+}
+.single-slots-demo-back-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.3s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%,-50%);
+}
+.single-slots-demo-back-play:hover {
+  opacity: 0.8;
+}
+.single-slots-demo-block {
+  display: none;
+  justify-content: center;
+}
+.single-slots-demo-block.play {
+  display: flex;
+}
+.single-slots-demo-back-cont p {
+  margin: 30px 0 20px 0;
+}
+iframe {
+  border: 0;
+}
+.demo-iframe {
+  width: 1200px;
+  height: 680px;
+}
+.main-text.slot {
+  background: #e7fdf8;
+  margin-bottom: 0;
+  position: relative;
+  margin-top: 50px;
+}
+.single-slots-title {
+  margin-top: 0;
+  font-size: 25px;
+}
+.single-slots-demo-back-title-icon {
+  width: 44px;
+  height: 44px;
+  background: #bfdfd8;
+  border-radius: 0 4px 4px 0;
+  transition: .3s;
+  position: absolute;
+  top: 0;
+  right: -44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close-demo-icon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.full-btn {
+  width: 44px;
+  height: 44px;
+  background: #bfdfd8;
+  border-radius: 0 4px 4px 0;
+  transition: .3s;
+  position: absolute;
+  top: 75px;
+  right: -44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.full-btn-icon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.single-slots-demo-back-iframe .single-slots-demo-back-title-icon {
+  top: 29px;
+}
+
+@media screen and (max-width: 1600px) {
+  .main-slider::before {
+      bottom: -25px;
+  }
+  .games-block-list {
+      grid-template-columns: repeat(4, 1fr);
+  }
+  .demo-iframe {
+    width: 900px;
+    height: 540px;
+  }
+} 
+@media screen and (max-width: 1440px) {
+  .category-tabs-item:last-child:after {
+      display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .main-slider::before {
+      bottom: -5px;
+  }
+  .jackpot-block-content-title {
+      font-size: calc(16px + 2vw);
+  }
+  .jackpot-block-sum {
+      font-size: calc(16px + 3.8vw);
+  }
+  .banner-block-tournir-content {
+      flex: 1 1 100%;
+      margin: 0;
+  }
+  .demo-iframe {
+    width: 700px;
+    height: 400px;
+  }
+} 
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 990px) {
+  .header {
+      display: none;
+  }
+  .mobile-header {
+      display: block;
+      padding: 20px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #f8fbfb;
+      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.12);
+  }
+  .mobile-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .main {
+      padding-left: 0;
+  }
+  .mobile-container a img {
+      height: 36px;
+  }
+  .jackpot-block-content {
+      padding: 50px 160px;
+  }
+  .jackpot-block-img-left {
+      position: absolute;
+  }
+  .jackpot-block-img-right {
+      position: absolute;
+  }
+  .jackpot-block {
+      margin-top: 30px;
+  }
+  .bonus-block {
+      z-index: 3;
+  }
+  .deposit-block-item {
+      flex: 1 1 50%;
+      max-width: 50%;
+  }
+  .banner-block-content-title {
+      font-size: calc(14px + 2vw);
+  }
+  .footer-bottom {
+      display: block;
+  }
+  .footer-bottom-icons {
+      margin: 25px 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .category-block-tabs {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .category-tabs-item {
+      margin-bottom: 5px;
+  }
+  .demo-iframe {
+    width: 600px;
+  }
+} 
+@media screen and (max-width: 768px) {
+  .mobile-header {
+      padding: 8px 15px;
+  }
+  .search-block-content {
+      padding: 0 25px;
+  }
+  .search-block::before {
+      display: none;
+  }
+  .search-block-providers {
+      display: none;
+  }
+  .filter-mobile {
+      display: flex;
+  }
+  .search-block-right {
+      flex-grow: 1;
+  }
+  .games-block-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .banner-block-tournir-content-img {
+      margin-right: 20px;
+      max-width: 110px;
+  }
+  .banner-block-tournir {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      overflow: hidden;
+  }
+  .banner-block-tournir-left {
+      order: 1;
+      display: block;
+      top: 4.5vw;
+  }
+  .banner-block-tournir-right {
+      order: 2;
+      flex-grow: 1;
+      text-align: right;
+  }
+  .banner-block-tournir-content-title {
+      font-size: 18px;
+  }
+  .banner-block-tournir-content-text {
+      font-size: 12px;
+  }
+  .banner-block-tournir-list {
+      font-size: 12px;
+      margin: 20px 0;
+  }
+  .error-btn-home {
+    font-size: 16px;
+  }
+  .error-block-content {
+    padding-top: 50px;
+  }
+  .demo-iframe {
+    width: 440px;
+    height: 300px;
+  }
+  .single-slots-demo-back-play {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header-content-logo-link.up.mobile {
+      min-width: 80px;
+  }
+  .jackpot-block-img-left {
+      transform: scale(0.6);
+      left: -50px;
+  }
+  .jackpot-block-img-right {
+      transform: scale(0.6);
+      right: -25px;
+  }
+  .jackpot-block-content {
+      width: 100%;
+      padding: 50px 0;
+  }
+  .banner-block-tournir-left {
+      display: none;
+  }
+  .banner-block-tournir-right {
+      text-align: center;
+  }
+  .license-icon-block {
+      flex: 0 0 80px;
+      max-width: 80px;
+      padding: 0 15px;
+  }
+  .demo-iframe {
+    width: 300px;
+    height: 200px;
+  }
+} 
+@media screen and (max-width: 520px) {
+  .category-tabs-item {
+      flex: 1 1 85px;
+      max-width: 85px;
+  }
+  .category-tabs-item::after {
+      display: none;
+  }
+  .deposit-block-item-title {
+      font-size: 16px;
+  }
+  .deposit-block-item-descr {
+      font-size: 12px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .demo-iframe {
+    width: 200px;
+    height: 100px;
+  }
+  .single-slots-demo-back-title-icon {
+    width: 25px;
+    height: 25px;
+    right: -25px;
+  }
+  .full-btn {
+    width: 25px;
+    height: 25px;
+    right: -25px;
+    top: 55px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .jackpot-block-img-right {
+      display: none;
+  }
+  .error-btn-home {
+    min-width: 150px;
+  }
+  .single-slots-demo-back-play {
+    width: 50px;
+    height: 50px;
+  }
+}
